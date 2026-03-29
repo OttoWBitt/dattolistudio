@@ -47,7 +47,7 @@ jobs:
         env:
           INFRA_TOKEN: ${{ secrets.INFRA_TOKEN }}
         run: |
-          git clone https://OttoWBitt:$\{INFRA_TOKEN\}@github.com/OttoWBitt/k3s-infra.git
+          git clone https://OttoWBitt:${INFRA_TOKEN}@github.com/OttoWBitt/k3s-infra.git
           cd k3s-infra
           git config user.email "deploy-bot@ottobittencourt.com"
           git config user.name "deploy-bot"
