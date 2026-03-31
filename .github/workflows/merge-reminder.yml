@@ -16,25 +16,13 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           BASE="${{ github.base_ref }}"
-
           if [ "$BASE" = "main" ]; then
-            MESSAGE=$(cat <<'EOF'
-## ⚠️ Tipo de merge obrigatório
-
-Este PR vai para `main`. Use **Merge commit** — não use squash nem rebase.
-EOF
-            )
+            printf '## Tipo de merge obrigatorio\n\nEste PR vai para `main`. Use **Merge commit** - nao use squash nem rebase.' > /tmp/msg.md
           elif [ "$BASE" = "develop" ]; then
-            MESSAGE=$(cat <<'EOF'
-## ⚠️ Tipo de merge obrigatório
-
-Este PR vai para `develop`. Use **Squash merge** — mantém o histórico limpo.
-EOF
-            )
+            printf '## Tipo de merge obrigatorio\n\nEste PR vai para `develop`. Use **Squash merge** - mantem o historico limpo.' > /tmp/msg.md
           else
             exit 0
           fi
-
           gh pr comment ${{ github.event.pull_request.number }} \
             --repo ${{ github.repository }} \
-            --body "$MESSAGE"
+            --body-file /tmp/msg.md
