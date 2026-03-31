@@ -26,4 +26,8 @@ jobs:
             --base develop \
             --head main \
             --title "chore: backport main → develop" \
-            --body "Backport automático após merge na \`main\`."$'\n\n'"**Merge type:** Merge commit"
+            --body "Backport automático após merge na \`main\`.
+
+## ⚠️ Tipo de merge obrigatório
+
+Use **Merge commit** — não use squash nem rebase."
