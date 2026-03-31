@@ -1,6 +1,6 @@
 # dattolistudio
 
-Site do Datto Li Studio — React + Vite.
+Site do Dattoli Studio — React + Vite.
 
 ## Execução local
 
