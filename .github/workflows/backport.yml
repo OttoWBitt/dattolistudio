@@ -1,0 +1,29 @@
+name: Backport main → develop
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  backport:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Create backport PR
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: develop
+          branch: backport/main-to-develop-${{ github.sha }}
+          title: "chore: backport main → develop"
+          body: |
+            Backport automático após merge na `main`.
+
+            **Merge type:** Merge commit
+          labels: backport
+          delete-branch: true
