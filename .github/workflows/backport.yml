@@ -1,4 +1,4 @@
-name: Backport main → develop
+name: Backport main to develop
 
 on:
   push:
@@ -22,18 +22,12 @@ jobs:
         run: |
           EXISTING=$(gh pr list --base develop --head main --json number --jq '.[0].number')
           if [ -n "$EXISTING" ]; then
-            echo "PR de backport já existe: #$EXISTING"
+            echo "PR de backport ja existe: #$EXISTING"
             exit 0
           fi
-
-          BODY="Backport automático após merge na \`main\`.
-
-## ⚠️ Tipo de merge obrigatório
-
-Use **Merge commit** — não use squash nem rebase."
-
+          printf 'Backport automatico apos merge na `main`.\n\n## Tipo de merge obrigatorio\n\nUse **Merge commit** - nao use squash nem rebase.' > /tmp/body.md
           gh pr create \
             --base develop \
             --head main \
-            --title "chore: backport main → develop" \
-            --body "$BODY"
+            --title "chore: backport main to develop" \
+            --body-file /tmp/body.md
