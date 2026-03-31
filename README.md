@@ -21,7 +21,9 @@ Acessa em `http://localhost:5173`.
 
 ## Fluxo de desenvolvimento
 
-### Desenvolver e testar
+### 1. Desenvolver
+
+Trabalhe sempre na `develop` (ou em uma feature branch):
 
 ```bash
 git checkout develop
@@ -31,20 +33,28 @@ git commit -m "descrição da mudança"
 git push
 ```
 
-O push para `develop` dispara o GitHub Actions automaticamente:
-- Builda a imagem Docker para `linux/arm64`
-- Publica em `ghcr.io/ottowbitt/dattolistudio:dev-<sha>`
-- Atualiza o deploy em `sandbox.dattolistudio.com.br` via FluxCD (~2 min)
+### 2. Abrir PR para develop
 
-### Subir para produção
+Abra um PR da sua branch para `develop`. A pipeline vai:
+- Rodar `npm run build` e o build Docker para verificar erros (**sem publicar imagem**)
+- Postar um comentário lembrando: use **Squash merge**
 
-```bash
-git checkout main
-git merge develop
-git push
-```
+Após o merge:
+- Imagem publicada em `ghcr.io/ottowbitt/dattolistudio:dev-<sha>`
+- Deploy automático em `sandbox.dattolistudio.com.br` via FluxCD (~2 min)
 
-O push para `main` segue o mesmo fluxo, atualizando `dattolistudio.com.br`.
+### 3. Subir para produção
+
+Abra um PR de `develop → main`. Use **Merge commit**.
+
+Após o merge:
+- Imagem publicada em `ghcr.io/ottowbitt/dattolistudio:<sha>`
+- Deploy automático em `dattolistudio.com.br` via FluxCD (~2 min)
+- PR de backport `main → develop` criado automaticamente
+
+### 4. Backport
+
+Após o merge na `main`, um PR `main → develop` é aberto automaticamente. Use **Merge commit**.
 
 ### Rollback
 
