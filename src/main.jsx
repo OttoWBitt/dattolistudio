@@ -10,7 +10,7 @@ if (import.meta.env.PROD) {
     app: {
       name: 'dattolistudio',
       version: '1.0.0',
-      environment: import.meta.env.MODE === 'production' ? 'production' : 'staging',
+      environment: import.meta.env.VITE_APP_ENV || 'production',
     },
     instrumentations: [
       ...getWebInstrumentations(),
