@@ -4,6 +4,9 @@ on:
   pull_request:
     types: [opened]
 
+permissions:
+  pull-requests: write
+
 jobs:
   remind:
     runs-on: ubuntu-latest
@@ -15,13 +18,19 @@ jobs:
           BASE="${{ github.base_ref }}"
 
           if [ "$BASE" = "main" ]; then
-            MESSAGE="## ⚠️ Tipo de merge obrigatório
+            MESSAGE=$(cat <<'EOF'
+## ⚠️ Tipo de merge obrigatório
 
-Este PR vai para \`main\`. Use **Merge commit** — não use squash nem rebase."
+Este PR vai para `main`. Use **Merge commit** — não use squash nem rebase.
+EOF
+            )
           elif [ "$BASE" = "develop" ]; then
-            MESSAGE="## ⚠️ Tipo de merge obrigatório
+            MESSAGE=$(cat <<'EOF'
+## ⚠️ Tipo de merge obrigatório
 
-Este PR vai para \`develop\`. Use **Squash merge** — mantém o histórico limpo."
+Este PR vai para `develop`. Use **Squash merge** — mantém o histórico limpo.
+EOF
+            )
           else
             exit 0
           fi

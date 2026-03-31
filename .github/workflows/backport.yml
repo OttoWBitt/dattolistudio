@@ -26,11 +26,14 @@ jobs:
             exit 0
           fi
 
-          BODY="Backport automático após merge na \`main\`.
+          BODY=$(cat <<'EOF'
+Backport automático após merge na `main`.
 
 ## ⚠️ Tipo de merge obrigatório
 
-Use **Merge commit** — não use squash nem rebase."
+Use **Merge commit** — não use squash nem rebase.
+EOF
+          )
 
           gh pr create \
             --base develop \
