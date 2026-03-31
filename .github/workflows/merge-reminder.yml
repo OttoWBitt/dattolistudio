@@ -1,0 +1,31 @@
+name: Merge type reminder
+
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comment merge type
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BASE="${{ github.base_ref }}"
+
+          if [ "$BASE" = "main" ]; then
+            MESSAGE="## ⚠️ Tipo de merge obrigatório
+
+Este PR vai para \`main\`. Use **Merge commit** — não use squash nem rebase."
+          elif [ "$BASE" = "develop" ]; then
+            MESSAGE="## ⚠️ Tipo de merge obrigatório
+
+Este PR vai para \`develop\`. Use **Squash merge** — mantém o histórico limpo."
+          else
+            exit 0
+          fi
+
+          gh pr comment ${{ github.event.pull_request.number }} \
+            --repo ${{ github.repository }} \
+            --body "$MESSAGE"
