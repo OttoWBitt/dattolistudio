@@ -8,6 +8,8 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "@grafana/faro-web-sdk": "^1.0.0",
+    "@grafana/faro-web-tracing": "^1.0.0",
     "framer-motion": "^11.18.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
