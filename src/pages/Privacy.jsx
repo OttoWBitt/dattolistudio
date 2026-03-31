@@ -9,7 +9,7 @@ export default function Privacy() {
           <Link to="/" className="privacy-back">Voltar ao início</Link>
 
           <h1>Política de Privacidade</h1>
-          <p className="privacy-date">Última atualização: março de 2026</p>
+          <p className="privacy-date">Última atualização: março de 2025</p>
 
           <h2>1. Responsável pelo Tratamento dos Dados</h2>
           <p>
@@ -58,18 +58,13 @@ export default function Privacy() {
             realizada por meio de conexão segura (HTTPS).
           </p>
 
-          <h2>6. Cookies e Dados de Desempenho</h2>
+          <h2>6. Cookies</h2>
           <p>
-            Este site utiliza um cookie técnico de consentimento (<code>kd_cookie_consent</code>),
-            armazenado localmente no navegador do usuário, com a finalidade de registrar a
-            escolha do visitante em relação ao aviso de cookies.
-          </p>
-          <p>
-            Ao acessar este site, coletamos automaticamente dados anônimos de desempenho e
-            experiência do usuário por meio do Grafana Faro (Grafana Labs), com base no
-            legítimo interesse do controlador (LGPD, Art. 7º, IX). São coletadas informações
-            como número de acessos, tempo de carregamento de página e erros de JavaScript —
-            sem identificar o usuário individualmente e sem armazenar dados pessoais.
+            Este site utiliza apenas um cookie técnico de consentimento
+            (<code>kd_cookie_consent</code>), armazenado localmente no navegador do usuário,
+            com a finalidade de registrar a escolha do visitante em relação ao aviso de
+            cookies. Não utilizamos cookies de rastreamento, publicidade ou analytics de
+            terceiros.
           </p>
 
           <h2>7. Direitos do Titular</h2>

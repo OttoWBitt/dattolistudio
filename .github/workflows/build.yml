@@ -42,8 +42,6 @@ jobs:
           platforms: linux/arm64
           push: true
           tags: ghcr.io/ottowbitt/dattolistudio:${{ steps.tag.outputs.tag }}
-          build-args: |
-            VITE_APP_ENV=${{ github.ref == 'refs/heads/main' && 'production' || 'staging' }}
 
       - name: Update k3s-infra
         env:
