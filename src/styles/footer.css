@@ -31,8 +31,13 @@
 .footer__brand p {
   font-size: 0.75rem;
   letter-spacing: 0.05em;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.6);
   font-weight: 300;
+}
+
+.footer__brand-address {
+  margin-top: 0.6rem;
+  line-height: 1.6;
 }
 
 .footer__links {
@@ -48,7 +53,6 @@
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.6);
   transition: color var(--transition);
-  min-height: 44px;
   display: flex;
   align-items: center;
 }
@@ -62,12 +66,15 @@
   gap: var(--spacing-sm);
 }
 
-.footer__social a {
+.footer__social a,
+.footer__social button {
   font-size: 0.7rem;
   font-weight: 500;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.6);
+  background: none;
+  cursor: pointer;
   transition: color var(--transition);
   border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 0.5rem 1rem;
@@ -76,7 +83,14 @@
   align-items: center;
 }
 
-.footer__social a:hover {
+.footer__icon-link {
+  padding: 0.5rem;
+  min-width: 44px;
+  justify-content: center;
+}
+
+.footer__social a:hover,
+.footer__social button:hover {
   color: var(--color-white);
   border-color: rgba(255, 255, 255, 0.6);
 }
@@ -92,13 +106,13 @@
 
 .footer__bottom p {
   font-size: 0.7rem;
-  color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.6);
   font-weight: 300;
 }
 
 .footer__bottom a {
   font-size: 0.7rem;
-  color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.6);
   text-decoration: underline;
   text-underline-offset: 3px;
   transition: color var(--transition);
@@ -117,5 +131,9 @@
   .footer__bottom {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .footer__links a {
+    min-height: 44px;
   }
 }
