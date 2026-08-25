@@ -1,0 +1,113 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(26, 26, 26, 0.85);
+  z-index: 1500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md);
+  overflow-y: auto;
+}
+
+.modal {
+  background: var(--color-white);
+  width: 100%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.modal__close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: none;
+  border: 1px solid var(--color-border);
+  font-size: 1.2rem;
+  color: var(--color-muted);
+  transition: all var(--transition);
+  z-index: 10;
+}
+
+.modal__close:hover {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border-color: var(--color-black);
+}
+
+.modal__image-wrap {
+  position: relative;
+}
+
+.modal__image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background-color: var(--color-cream);
+  display: block;
+}
+
+.modal__image-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: var(--color-cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__image-placeholder span {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.modal__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: rgba(26, 26, 26, 0.6);
+  border: none;
+  color: var(--color-white);
+  font-size: 1.8rem;
+  line-height: 1;
+  transition: background var(--transition);
+}
+
+.modal__nav:hover {
+  background: var(--color-black);
+}
+
+.modal__nav--prev {
+  left: var(--spacing-sm);
+}
+
+.modal__nav--next {
+  right: var(--spacing-sm);
+}
+
+.modal__counter {
+  position: absolute;
+  bottom: var(--spacing-sm);
+  right: var(--spacing-sm);
+  padding: 0.3rem 0.6rem;
+  background: rgba(26, 26, 26, 0.6);
+  color: var(--color-white);
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+}

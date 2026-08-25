@@ -53,7 +53,7 @@ export default function Contact() {
             {/* INFO */}
             <div>
               <p className="contact-info__label">Localização</p>
-              <p className="contact-info__value">Salvador, Bahia<br />Atuação nacional</p>
+              <p className="contact-info__value">Mundo Plaza Empresarial<br />Av. Tancredo Neves, 620 - Caminho das Árvores<br />Salvador - BA, 41100-800</p>
 
               <div className="contact-info__divider" />
 
@@ -152,9 +152,10 @@ export default function Contact() {
                   required
                 />
                 <label htmlFor="consent">
-                  Li e concordo com a{' '}
-                  <Link to="/politica-de-privacidade">Política de Privacidade</Link>{' '}
-                  e autorizo o uso dos meus dados para retorno de contato.
+                  Concordo com o tratamento dos meus dados pessoais, de acordo com a LGPD,
+                  para fins de contato sobre meu projeto e envio de outras comunicações do
+                  escritório, conforme a{' '}
+                  <Link to="/politica-de-privacidade">Política de Privacidade</Link>.
                 </label>
               </div>
 

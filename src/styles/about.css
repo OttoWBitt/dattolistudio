@@ -1,5 +1,5 @@
-.about-hero {
-  padding: var(--spacing-xl) 0 var(--spacing-lg);
+.about-hero.section {
+  padding: var(--spacing-md) 0 var(--spacing-lg);
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -58,6 +58,21 @@
   width: 100%;
   aspect-ratio: 3 / 4;
   object-fit: cover;
+}
+
+.about-hero__image-credit {
+  margin-top: 0.5rem;
+  font-size: 0.7rem;
+  color: var(--color-muted);
+  text-align: right;
+}
+
+.about-hero__image-credit a {
+  color: inherit;
+}
+
+.about-hero__image-credit a:hover {
+  color: var(--color-black);
 }
 
 .about-hero__image-placeholder {

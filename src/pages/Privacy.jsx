@@ -9,7 +9,7 @@ export default function Privacy() {
           <Link to="/" className="privacy-back">Voltar ao início</Link>
 
           <h1>Política de Privacidade</h1>
-          <p className="privacy-date">Última atualização: março de 2025</p>
+          <p className="privacy-date">Última atualização: agosto de 2026</p>
 
           <h2>1. Responsável pelo Tratamento dos Dados</h2>
           <p>
@@ -37,17 +37,20 @@ export default function Privacy() {
 
           <h2>3. Finalidade do Tratamento</h2>
           <p>
-            Os dados coletados são utilizados exclusivamente para responder à solicitação
-            enviada pelo titular — seja orçamento de projeto, avaliação de imóvel, candidatura
-            a vaga ou outro contato. Os dados não são utilizados para fins de marketing,
-            criação de perfis ou compartilhamento com terceiros.
+            Os dados coletados são utilizados para responder à solicitação enviada pelo
+            titular — seja orçamento de projeto, avaliação de imóvel, candidatura a vaga ou
+            outro contato — e, mediante consentimento expresso no momento do envio do
+            formulário, para o envio de outras comunicações do escritório, como novidades,
+            conteúdos e informações sobre projetos e serviços. Os dados não são
+            compartilhados com terceiros nem utilizados para criação de perfis.
           </p>
 
           <h2>4. Base Legal (LGPD, Art. 7º)</h2>
           <p>
-            O tratamento é realizado com base no consentimento expresso do titular (inciso I)
-            e no legítimo interesse do controlador para responder às solicitações recebidas
-            (inciso IX), conforme a finalidade declarada acima.
+            O tratamento é realizado com base no consentimento expresso do titular (inciso I),
+            fornecido no momento do envio do formulário de contato, tanto para responder à
+            solicitação quanto, quando autorizado, para o envio de outras comunicações do
+            escritório.
           </p>
 
           <h2>5. Armazenamento e Segurança</h2>
@@ -87,8 +90,12 @@ export default function Privacy() {
 
           <h2>8. Retenção dos Dados</h2>
           <p>
-            Os dados são retidos pelo tempo necessário para atender à solicitação do titular
-            ou pelo prazo legalmente exigido. Após esse período, são descartados de forma segura.
+            Os dados relativos à solicitação são retidos pelo tempo necessário para atendê-la
+            ou pelo prazo legalmente exigido. Quando o titular consentir com o recebimento de
+            outras comunicações do escritório, os dados de contato (nome e e-mail) são mantidos
+            até a revogação do consentimento, que pode ser solicitada a qualquer momento pelo
+            e-mail <a href="mailto:contato@dattolistudio.com.br">contato@dattolistudio.com.br</a>.
+            Após o descarte, os dados são eliminados de forma segura.
           </p>
 
           <h2>9. Alterações nesta Política</h2>

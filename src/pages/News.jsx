@@ -2,6 +2,8 @@ import SEO from '../components/SEO'
 import news, { podcast } from '../data/news'
 import '../styles/news.css'
 
+const sortedNews = [...news].sort((a, b) => new Date(b.date) - new Date(a.date))
+
 export default function News() {
   return (
     <main className="page-wrapper">
@@ -21,7 +23,7 @@ export default function News() {
       {/* ARTIGOS */}
       <section className="news-list">
         <div className="container">
-          {news.map(article => (
+          {sortedNews.map(article => (
             <article className="news-article" key={article.id}>
               <div>
                 {article.image ? (
