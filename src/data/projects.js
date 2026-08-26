@@ -1,6 +1,6 @@
 // Para adicionar um projeto, preencha os campos abaixo.
 // coverImage e images[] devem ser caminhos relativos à pasta /public
-// Ex: coverImage: '/projetos/residencia-pituba/capa.jpg'
+// Ex: coverImage: '/media/projetos/residencia-pituba/capa.jpg'
 //
 // coverImage: foto usada como capa no grid de Projetos.
 // images[]: galeria completa mostrada (com setas de navegação) ao abrir o projeto.
@@ -14,16 +14,16 @@ const projects = [
     category: 'Comercial',
     year: 2025,
     location: 'São Paulo, SP',
-    coverImage: '/projetos/canal-goat/capa.jpg',
+    coverImage: '/media/projetos/canal-goat/capa.jpg',
     images: [
-      '/projetos/canal-goat/foto-01.jpg',
-      '/projetos/canal-goat/foto-02.jpg',
-      '/projetos/canal-goat/foto-03.jpg',
-      '/projetos/canal-goat/foto-04.jpg',
-      '/projetos/canal-goat/foto-05.jpg',
-      '/projetos/canal-goat/foto-06.jpg',
-      '/projetos/canal-goat/foto-07.jpg',
-      '/projetos/canal-goat/foto-08.jpg',
+      '/media/projetos/canal-goat/foto-01.jpg',
+      '/media/projetos/canal-goat/foto-02.jpg',
+      '/media/projetos/canal-goat/foto-03.jpg',
+      '/media/projetos/canal-goat/foto-04.jpg',
+      '/media/projetos/canal-goat/foto-05.jpg',
+      '/media/projetos/canal-goat/foto-06.jpg',
+      '/media/projetos/canal-goat/foto-07.jpg',
+      '/media/projetos/canal-goat/foto-08.jpg',
     ],
     description:
       'Projeto de interiores para o estúdio do canal Canal Goat, com ambientes voltados à produção de conteúdo esportivo e identidade visual da marca.',
@@ -34,17 +34,17 @@ const projects = [
     category: 'Comercial',
     year: 2021,
     location: 'Salvador Shopping, Salvador, BA',
-    coverImage: '/projetos/loja-alice-salazar/capa.jpg',
+    coverImage: '/media/projetos/loja-alice-salazar/capa.jpg',
     images: [
-      '/projetos/loja-alice-salazar/foto-01.jpg',
-      '/projetos/loja-alice-salazar/foto-02.jpg',
-      '/projetos/loja-alice-salazar/foto-03.jpg',
-      '/projetos/loja-alice-salazar/foto-04.jpg',
-      '/projetos/loja-alice-salazar/foto-05.jpg',
-      '/projetos/loja-alice-salazar/foto-06.jpg',
-      '/projetos/loja-alice-salazar/foto-07.jpg',
-      '/projetos/loja-alice-salazar/foto-08.jpg',
-      '/projetos/loja-alice-salazar/foto-09.jpg',
+      '/media/projetos/loja-alice-salazar/foto-01.jpg',
+      '/media/projetos/loja-alice-salazar/foto-02.jpg',
+      '/media/projetos/loja-alice-salazar/foto-03.jpg',
+      '/media/projetos/loja-alice-salazar/foto-04.jpg',
+      '/media/projetos/loja-alice-salazar/foto-05.jpg',
+      '/media/projetos/loja-alice-salazar/foto-06.jpg',
+      '/media/projetos/loja-alice-salazar/foto-07.jpg',
+      '/media/projetos/loja-alice-salazar/foto-08.jpg',
+      '/media/projetos/loja-alice-salazar/foto-09.jpg',
     ],
     description:
       'Projeto de interiores para loja de cosméticos e maquiagem multimarcas no Salvador Shopping, com identidade de marca aplicada ao ambiente de venda.',
@@ -55,14 +55,14 @@ const projects = [
     category: 'Residencial',
     year: 2026,
     location: 'São Paulo, SP',
-    coverImage: '/projetos/mini-apt-azul/capa.jpg',
+    coverImage: '/media/projetos/mini-apt-azul/capa.jpg',
     images: [
-      '/projetos/mini-apt-azul/sala-01.jpg',
-      '/projetos/mini-apt-azul/sala-02.jpg',
-      '/projetos/mini-apt-azul/sala-03.jpg',
-      '/projetos/mini-apt-azul/banheiro.jpg',
-      '/projetos/mini-apt-azul/quarto-casal.jpg',
-      '/projetos/mini-apt-azul/quarto-filha.jpg',
+      '/media/projetos/mini-apt-azul/sala-01.jpg',
+      '/media/projetos/mini-apt-azul/sala-02.jpg',
+      '/media/projetos/mini-apt-azul/sala-03.jpg',
+      '/media/projetos/mini-apt-azul/banheiro.jpg',
+      '/media/projetos/mini-apt-azul/quarto-casal.jpg',
+      '/media/projetos/mini-apt-azul/quarto-filha.jpg',
     ],
     description:
       'Projeto de interiores para apartamento compacto, otimizando espaço e funcionalidade em ambientes integrados.',
@@ -73,14 +73,14 @@ const projects = [
     category: 'Residencial',
     year: 2026,
     location: 'São Paulo, SP',
-    coverImage: '/projetos/mini-apt-verde/capa.jpg',
+    coverImage: '/media/projetos/mini-apt-verde/capa.jpg',
     images: [
-      '/projetos/mini-apt-verde/sala-03.jpg',
-      '/projetos/mini-apt-verde/sala-cozinha.jpg',
-      '/projetos/mini-apt-verde/quarto-casal.jpg',
-      '/projetos/mini-apt-verde/quarto-02.jpg',
-      '/projetos/mini-apt-verde/quarto-hospedes.jpg',
-      '/projetos/mini-apt-verde/banheiro.jpg',
+      '/media/projetos/mini-apt-verde/sala-03.jpg',
+      '/media/projetos/mini-apt-verde/sala-cozinha.jpg',
+      '/media/projetos/mini-apt-verde/quarto-casal.jpg',
+      '/media/projetos/mini-apt-verde/quarto-02.jpg',
+      '/media/projetos/mini-apt-verde/quarto-hospedes.jpg',
+      '/media/projetos/mini-apt-verde/banheiro.jpg',
     ],
     description:
       'Projeto de interiores para apartamento compacto, otimizando espaço e funcionalidade em ambientes integrados.',
@@ -91,9 +91,9 @@ const projects = [
     category: 'Residencial',
     year: 2027,
     location: 'Praia do Forte',
-    coverImage: '/projetos/praia-do-forte/capa.jpg',
+    coverImage: '/media/projetos/praia-do-forte/capa.jpg',
     images: [
-      '/projetos/praia-do-forte/em-obras-2026.jpg',
+      '/media/projetos/praia-do-forte/em-obras-2026.jpg',
     ],
     description:
       'Projeto residencial unifamiliar em fase de construção, com previsão de conclusão em 2027.',
