@@ -42,6 +42,10 @@ export default function Projects() {
         </div>
       </section>
 
+      <h2 className="sr-only">
+        {activeCategory === 'Todos' ? 'Todos os projetos' : `Projetos — ${activeCategory}`}
+      </h2>
+
       <div className="projects-grid">
         {filtered.length > 0 ? (
           filtered.map(project => (

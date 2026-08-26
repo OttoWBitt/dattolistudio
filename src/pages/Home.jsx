@@ -29,6 +29,18 @@ export default function Home() {
         description="Dattoli Studio — arquitetura, interiores e avaliação de imóveis em Salvador, Bahia. Projetos residenciais e comerciais e laudos técnicos para pessoas físicas, jurídicas e poder judiciário. Atuação nacional."
       />
 
+      {/* ── HEADER ── */}
+      <section className="home-header section">
+        <div className="container">
+          <p className="section-label">Dattoli Studio</p>
+          <h1 className="section-title">Arquitetura e Interiores em Salvador, Bahia</h1>
+          <p className="home-header__subtitle">
+            Projetos residenciais, comerciais e avaliação técnica de imóveis, com
+            atuação em todo o Brasil.
+          </p>
+        </div>
+      </section>
+
       {/* ── PROJETOS EM DESTAQUE ── */}
       <section className="featured-projects" aria-labelledby="featured-heading">
         <div className="container">

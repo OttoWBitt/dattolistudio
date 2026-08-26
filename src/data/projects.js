@@ -87,13 +87,13 @@ const projects = [
   },
   {
     id: 5,
-    title: 'Residência Praia do Castelo',
+    title: 'Residência Praia do Forte',
     category: 'Residencial',
     year: 2027,
-    location: 'Praia do Castelo',
-    coverImage: '/projetos/praia-do-castelo/capa.jpg',
+    location: 'Praia do Forte',
+    coverImage: '/projetos/praia-do-forte/capa.jpg',
     images: [
-      '/projetos/praia-do-castelo/em-obras-2026.jpg',
+      '/projetos/praia-do-forte/em-obras-2026.jpg',
     ],
     description:
       'Projeto residencial unifamiliar em fase de construção, com previsão de conclusão em 2027.',
