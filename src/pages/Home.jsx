@@ -33,7 +33,7 @@ export default function Home() {
       <section className="home-header section">
         <div className="container">
           <p className="section-label">Dattoli Studio</p>
-          <h1 className="section-title">Arquitetura e Interiores em Salvador, Bahia</h1>
+          <h1 className="section-title">Seu espaço, sua história, nosso traço</h1>
           <p className="home-header__subtitle">
             Projetos residenciais, comerciais e avaliação técnica de imóveis, com
             atuação em todo o Brasil.

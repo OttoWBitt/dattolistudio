@@ -41,7 +41,8 @@ export default function Privacy() {
             titular — seja orçamento de projeto, avaliação de imóvel, candidatura a vaga ou
             outro contato — e, mediante consentimento expresso no momento do envio do
             formulário, para o envio de outras comunicações do escritório, como novidades,
-            conteúdos e informações sobre projetos e serviços. Os dados não são
+            conteúdos e informações sobre projetos e serviços. Fora essa hipótese de
+            consentimento para outras comunicações (ver seção 5), os dados não são
             compartilhados com terceiros nem utilizados para criação de perfis.
           </p>
 
@@ -57,6 +58,9 @@ export default function Privacy() {
           <p>
             As mensagens enviadas pelo formulário são transmitidas via EmailJS, serviço
             terceirizado de envio de e-mail, diretamente à caixa de entrada do escritório.
+            Quando o titular consente com o recebimento de outras comunicações do escritório,
+            seu nome e e-mail também são enviados à Brevo, plataforma terceirizada de e-mail
+            marketing, onde ficam armazenados até a revogação do consentimento (ver seção 8).
             Este site não armazena dados pessoais em servidores próprios. A comunicação é
             realizada por meio de conexão segura (HTTPS).
           </p>

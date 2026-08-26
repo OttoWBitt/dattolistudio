@@ -8,7 +8,7 @@ const news = [
     summary:
       'O ASBEACast, podcast da Associação Brasileira dos Escritórios de Arquitetura, estreou sua primeira temporada durante a Convenção Nacional ASBEA 2025. Karine Dattoli é uma das apresentadoras do programa, que discute temas como regeneração urbana, arquitetura adaptativa e o papel dos escritórios na transformação das cidades.',
     url: 'https://revistaprojeto.com.br/noticias/asbeacast-estreia-sua-primeira-temporada-durante-a-convencao-nacional-asbea-2025/',
-    image: '/noticias/karine-revista-projeto.jpg',
+    image: '/media/noticias/karine-revista-projeto.jpg',
   },
   {
     id: 2,
