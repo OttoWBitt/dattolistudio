@@ -7,7 +7,7 @@ export default function About() {
     <main className="page-wrapper">
       <SEO
         title="Sobre"
-        description="Karine Dattoli — arquiteta e urbanista em Salvador, Bahia. Fundadora do Dattoli Studio. Especialista em projetos e avaliação de imóveis. Avaliadora credenciada pelo TJBA. Atuação nacional."
+        description="Karine Dattoli — arquiteta e urbanista em Salvador, Bahia. Fundadora do Dattoli Studio. Especialista em projetos e avaliação de imóveis. Perita Judicial credenciada pelo TJBA. Atuação nacional."
       />
 
       {/* HERO / BIO */}
@@ -36,6 +36,17 @@ export default function About() {
                 O escritório também atua na avaliação de imóveis, oferecendo suporte técnico
                 a clientes e instituições em decisões patrimoniais.
               </p>
+
+              <div className="about-hero__stats">
+                <div>
+                  <p className="about-hero__stat-number">10+</p>
+                  <p className="about-hero__stat-label">Anos de atuação</p>
+                </div>
+                <div>
+                  <p className="about-hero__stat-number">150+</p>
+                  <p className="about-hero__stat-label">Projetos entregues</p>
+                </div>
+              </div>
 
               <div style={{ marginTop: 'var(--spacing-md)' }}>
                 <Link to="/contato" className="btn btn--primary">Fale conosco</Link>
@@ -68,7 +79,6 @@ export default function About() {
           <div className="about-services__grid">
 
             <div>
-              <div className="about-service__number">01</div>
               <h3 className="about-service__title">Projetos de Arquitetura & Interiores</h3>
               <p className="about-service__text">
                 Projetos residenciais e comerciais em qualquer escala — do estudo de
@@ -79,7 +89,6 @@ export default function About() {
             </div>
 
             <div>
-              <div className="about-service__number">02</div>
               <h3 className="about-service__title">Avaliação de Imóveis</h3>
               <p className="about-service__text">
                 Laudos técnicos de avaliação mercadológica conforme normas ABNT, para
@@ -119,7 +128,7 @@ export default function About() {
             </div>
             <div className="about-info__item">
               <p className="about-info__label">Credenciamentos</p>
-              <p className="about-info__value">TJBA — Avaliadora judicial<br />Avaliações imobiliárias para instituições financeiras</p>
+              <p className="about-info__value">TJBA — Perita Judicial<br />Avaliações imobiliárias para instituições financeiras</p>
             </div>
           </div>
         </div>

@@ -49,6 +49,29 @@
   margin-bottom: var(--spacing-sm);
 }
 
+.about-hero__stats {
+  display: flex;
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-md);
+}
+
+.about-hero__stat-number {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: var(--color-black);
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+
+.about-hero__stat-label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
 .about-hero__image-wrap {
   position: sticky;
   top: calc(var(--nav-height) + 2rem);
@@ -93,24 +116,23 @@
 
 /* Services section */
 .about-services {
-  padding: var(--spacing-xl) 0;
+  padding: var(--spacing-lg) 0;
   background-color: var(--color-black);
+}
+
+.about-services .container {
+  max-width: 1600px;
+}
+
+.about-services .section-title {
+  color: var(--color-white);
 }
 
 .about-services__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--spacing-lg);
-  margin-top: var(--spacing-lg);
-}
-
-.about-service__number {
-  font-family: var(--font-heading);
-  font-size: 3rem;
-  color: rgba(196, 176, 154, 0.5);
-  font-weight: 300;
-  margin-bottom: var(--spacing-sm);
-  line-height: 1;
+  margin-top: var(--spacing-sm);
 }
 
 .about-service__title {
@@ -129,19 +151,19 @@
 }
 
 /* Info strip */
-.about-info {
-  padding: var(--spacing-lg) 0;
+.about-info.section {
+  padding: var(--spacing-md) 0;
   border-top: 1px solid var(--color-border);
 }
 
 .about-info__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--spacing-md);
+  gap: var(--spacing-sm);
 }
 
 .about-info__item {
-  padding: var(--spacing-md) 0;
+  padding: var(--spacing-sm) 0;
   border-top: 2px solid var(--color-beige);
 }
 
