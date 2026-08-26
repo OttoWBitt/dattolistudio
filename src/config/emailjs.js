@@ -10,7 +10,7 @@
 // 5. Substitua os valores abaixo pelos seus dados reais
 
 export const EMAILJS_CONFIG = {
-  serviceId: 'SEU_SERVICE_ID',
-  templateId: 'SEU_TEMPLATE_ID',
-  publicKey: 'SUA_PUBLIC_KEY',
+  serviceId: 'service_lv12cwi',
+  templateId: 'template_g7r07lp',
+  publicKey: 'F8K8uMtCLdroM0Gx3',
 }

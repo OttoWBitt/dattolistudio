@@ -2,6 +2,12 @@
 
 Site do Dattoli Studio — React + Vite.
 
+## Credenciais
+
+Credenciais de serviços (e-mail, EmailJS, Brevo, etc.) ficam em uma
+[planilha com acesso restrito](https://docs.google.com/spreadsheets/d/1a5-Wmx_kovrHT1FtxtUaDwumAbSXv51KStgUa5tYO3U/edit?gid=0#gid=0),
+nunca neste repositório.
+
 ## Execução local
 
 ```bash

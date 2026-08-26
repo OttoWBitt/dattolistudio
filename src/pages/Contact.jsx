@@ -3,12 +3,14 @@ import emailjs from '@emailjs/browser'
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
 import { EMAILJS_CONFIG } from '../config/emailjs'
+import { BREVO_CONFIG } from '../config/brevo'
 import '../styles/contact.css'
 
 export default function Contact() {
   const formRef = useRef(null)
   const [status, setStatus] = useState(null) // null | 'loading' | 'success' | 'error'
   const [consented, setConsented] = useState(false)
+  const [newsletterConsent, setNewsletterConsent] = useState(false)
 
   const handleSubmit = async e => {
     e.preventDefault()
@@ -22,9 +24,36 @@ export default function Contact() {
         formRef.current,
         EMAILJS_CONFIG.publicKey
       )
+
+      if (newsletterConsent) {
+        const data = new FormData()
+        data.append('EMAIL', formRef.current.from_email.value)
+        data.append('email_address_check', '') // honeypot anti-spam do Brevo, deve ir vazio
+        data.append('locale', BREVO_CONFIG.locale)
+
+        // Brevo espera o número nacional (sem 55) em SMS e o código do país à parte
+        // em SMS__COUNTRY_CODE — testado empiricamente, mandar os dois juntos no
+        // mesmo campo (ou omitir SMS__COUNTRY_CODE) faz a Brevo rejeitar com 400.
+        let smsDigits = formRef.current.phone.value.replace(/\D/g, '')
+        if (smsDigits.length > 11 && smsDigits.startsWith('55')) {
+          smsDigits = smsDigits.slice(2)
+        }
+        if (smsDigits) {
+          data.append('SMS', smsDigits)
+          data.append('SMS__COUNTRY_CODE', '+55')
+        }
+
+        fetch(BREVO_CONFIG.formActionUrl, {
+          method: 'POST',
+          mode: 'no-cors',
+          body: data,
+        }).catch(() => {}) // opt-in de newsletter não deve travar o envio do contato
+      }
+
       setStatus('success')
       formRef.current.reset()
       setConsented(false)
+      setNewsletterConsent(false)
     } catch {
       setStatus('error')
     }
@@ -153,9 +182,20 @@ export default function Contact() {
                 />
                 <label htmlFor="consent">
                   Concordo com o tratamento dos meus dados pessoais, de acordo com a LGPD,
-                  para fins de contato sobre meu projeto e envio de outras comunicações do
-                  escritório, conforme a{' '}
+                  para fins de contato sobre meu projeto, conforme a{' '}
                   <Link to="/politica-de-privacidade">Política de Privacidade</Link>.
+                </label>
+              </div>
+
+              <div className="form-consent">
+                <input
+                  type="checkbox"
+                  id="newsletter-consent"
+                  checked={newsletterConsent}
+                  onChange={e => setNewsletterConsent(e.target.checked)}
+                />
+                <label htmlFor="newsletter-consent">
+                  Quero receber novidades e comunicações do Dattoli Studio por e-mail.
                 </label>
               </div>
 

@@ -121,6 +121,10 @@
   padding: var(--spacing-sm) 0;
 }
 
+.form-consent + .form-consent {
+  padding-top: 0;
+}
+
 .form-consent input[type="checkbox"] {
   width: 18px;
   height: 18px;
