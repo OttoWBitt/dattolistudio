@@ -53,19 +53,21 @@ export default function Home() {
           </div>
         </div>
         <div className="featured-projects__grid" style={{ maxWidth: 'var(--max-width)', margin: '0 auto', padding: '0 var(--spacing-md)' }}>
-          <AnimatePresence mode="popLayout">
-            {featuredProjects.map(project => (
-              <motion.div
-                key={project.id}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0, position: 'absolute' }}
-                transition={{ duration: 0.6, ease: 'easeInOut' }}
-              >
-                <ProjectCard project={project} onClick={setSelectedProject} />
-              </motion.div>
-            ))}
-          </AnimatePresence>
+          {featuredProjects.map((project, i) => (
+            <div className="featured-projects__slot" key={i}>
+              <AnimatePresence mode="popLayout">
+                <motion.div
+                  key={project.id}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0, position: 'absolute' }}
+                  transition={{ duration: 0.6, ease: 'easeInOut' }}
+                >
+                  <ProjectCard project={project} onClick={setSelectedProject} />
+                </motion.div>
+              </AnimatePresence>
+            </div>
+          ))}
         </div>
       </section>
 
