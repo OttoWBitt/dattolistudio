@@ -36,6 +36,19 @@
   gap: var(--spacing-xs);
 }
 
+/* Slot com tamanho fixo (independe do card animando por dentro) —
+   evita que a troca a cada 15s mexa na estrutura do grid. */
+.featured-projects__slot {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.featured-projects__slot > div {
+  position: absolute;
+  inset: 0;
+}
+
 /* =============================================
    HOME — ABOUT TEASER
    ============================================= */
