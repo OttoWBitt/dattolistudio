@@ -1,73 +1,102 @@
 // Para adicionar um projeto, preencha os campos abaixo.
 // coverImage e images[] devem ser caminhos relativos à pasta /public
-// Ex: coverImage: '/images/projetos/residencia-pituba/capa.jpg'
+// Ex: coverImage: '/media/projetos/residencia-pituba/capa.jpg'
+//
+// coverImage: foto usada como capa no grid de Projetos.
+// images[]: galeria completa mostrada (com setas de navegação) ao abrir o projeto.
+//   Se vazio, o modal usa coverImage como única foto; se coverImage também
+//   estiver vazio, mostra "Imagens em breve".
 
 const projects = [
   {
     id: 1,
-    title: 'Residência Pituba',
-    category: 'Residencial',
-    year: 2024,
-    location: 'Salvador, BA',
-    coverImage: null,
-    images: [],
+    title: 'Canal Goat Youtube',
+    category: 'Comercial',
+    year: 2025,
+    location: 'São Paulo, SP',
+    coverImage: '/media/projetos/canal-goat/capa.jpg',
+    images: [
+      '/media/projetos/canal-goat/foto-01.jpg',
+      '/media/projetos/canal-goat/foto-02.jpg',
+      '/media/projetos/canal-goat/foto-03.jpg',
+      '/media/projetos/canal-goat/foto-04.jpg',
+      '/media/projetos/canal-goat/foto-05.jpg',
+      '/media/projetos/canal-goat/foto-06.jpg',
+      '/media/projetos/canal-goat/foto-07.jpg',
+      '/media/projetos/canal-goat/foto-08.jpg',
+    ],
     description:
-      'Reforma e interiores de apartamento de alto padrão no bairro da Pituba, com foco em integração de ambientes e materiais naturais.',
+      'Projeto de interiores para o estúdio do canal Canal Goat, com ambientes voltados à produção de conteúdo esportivo e identidade visual da marca.',
   },
   {
     id: 2,
-    title: 'Escritório Corporativo',
+    title: 'Loja Alice Salazar',
     category: 'Comercial',
-    year: 2024,
-    location: 'Salvador, BA',
-    coverImage: null,
-    images: [],
+    year: 2021,
+    location: 'Salvador Shopping, Salvador, BA',
+    coverImage: '/media/projetos/loja-alice-salazar/capa.jpg',
+    images: [
+      '/media/projetos/loja-alice-salazar/foto-01.jpg',
+      '/media/projetos/loja-alice-salazar/foto-02.jpg',
+      '/media/projetos/loja-alice-salazar/foto-03.jpg',
+      '/media/projetos/loja-alice-salazar/foto-04.jpg',
+      '/media/projetos/loja-alice-salazar/foto-05.jpg',
+      '/media/projetos/loja-alice-salazar/foto-06.jpg',
+      '/media/projetos/loja-alice-salazar/foto-07.jpg',
+      '/media/projetos/loja-alice-salazar/foto-08.jpg',
+      '/media/projetos/loja-alice-salazar/foto-09.jpg',
+    ],
     description:
-      'Projeto de escritório corporativo de médio porte, priorizando ergonomia, acústica e identidade da marca no espaço físico.',
+      'Projeto de interiores para loja de cosméticos e maquiagem multimarcas no Salvador Shopping, com identidade de marca aplicada ao ambiente de venda.',
   },
   {
     id: 3,
-    title: 'Casa Barra',
+    title: 'Mini Apartamento Azul',
     category: 'Residencial',
-    year: 2023,
-    location: 'Salvador, BA',
-    coverImage: null,
-    images: [],
+    year: 2026,
+    location: 'São Paulo, SP',
+    coverImage: '/media/projetos/mini-apt-azul/capa.jpg',
+    images: [
+      '/media/projetos/mini-apt-azul/sala-01.jpg',
+      '/media/projetos/mini-apt-azul/sala-02.jpg',
+      '/media/projetos/mini-apt-azul/sala-03.jpg',
+      '/media/projetos/mini-apt-azul/banheiro.jpg',
+      '/media/projetos/mini-apt-azul/quarto-casal.jpg',
+      '/media/projetos/mini-apt-azul/quarto-filha.jpg',
+    ],
     description:
-      'Residência unifamiliar na Barra com linguagem contemporânea, integração ao entorno e soluções bioclimáticas para o clima baiano.',
+      'Projeto de interiores para apartamento compacto, otimizando espaço e funcionalidade em ambientes integrados.',
   },
   {
     id: 4,
-    title: 'Loja Conceito',
-    category: 'Comercial',
-    year: 2023,
-    location: 'Salvador, BA',
-    coverImage: null,
-    images: [],
+    title: 'Mini Apartamento Verde',
+    category: 'Residencial',
+    year: 2026,
+    location: 'São Paulo, SP',
+    coverImage: '/media/projetos/mini-apt-verde/capa.jpg',
+    images: [
+      '/media/projetos/mini-apt-verde/sala-03.jpg',
+      '/media/projetos/mini-apt-verde/sala-cozinha.jpg',
+      '/media/projetos/mini-apt-verde/quarto-casal.jpg',
+      '/media/projetos/mini-apt-verde/quarto-02.jpg',
+      '/media/projetos/mini-apt-verde/quarto-hospedes.jpg',
+      '/media/projetos/mini-apt-verde/banheiro.jpg',
+    ],
     description:
-      'Projeto de varejo com experiência imersiva, uso criativo de iluminação e mobiliário sob medida.',
+      'Projeto de interiores para apartamento compacto, otimizando espaço e funcionalidade em ambientes integrados.',
   },
   {
     id: 5,
-    title: 'Apartamento Graça',
+    title: 'Residência Praia do Forte',
     category: 'Residencial',
-    year: 2022,
-    location: 'Salvador, BA',
-    coverImage: null,
-    images: [],
+    year: 2027,
+    location: 'Praia do Forte',
+    coverImage: '/media/projetos/praia-do-forte/capa.jpg',
+    images: [
+      '/media/projetos/praia-do-forte/em-obras-2026.jpg',
+    ],
     description:
-      'Interiores de apartamento histórico no bairro da Graça, conciliando elementos originais do imóvel com design contemporâneo.',
-  },
-  {
-    id: 6,
-    title: 'Clínica Médica',
-    category: 'Comercial',
-    year: 2022,
-    location: 'Feira de Santana, BA',
-    coverImage: null,
-    images: [],
-    description:
-      'Projeto arquitetônico e interiores de clínica médica especializada, com foco em humanização do ambiente e fluxos funcionais.',
+      'Projeto residencial unifamiliar em fase de construção, com previsão de conclusão em 2027.',
   },
 ]
 

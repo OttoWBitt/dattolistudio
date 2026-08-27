@@ -7,7 +7,7 @@ export default function About() {
     <main className="page-wrapper">
       <SEO
         title="Sobre"
-        description="Karine Dattoli — arquiteta e urbanista em Salvador, Bahia. Fundadora do Dattoli Studio. Especialista em projetos e avaliação de imóveis. Avaliadora credenciada pelo TJBA. Atuação nacional."
+        description="Karine Dattoli — arquiteta e urbanista em Salvador, Bahia. Fundadora do Dattoli Studio. Especialista em projetos e avaliação de imóveis. Perita Judicial credenciada pelo TJBA. Atuação nacional."
       />
 
       {/* HERO / BIO */}
@@ -20,28 +20,33 @@ export default function About() {
               <h1 className="about-hero__title">Karine Dattoli</h1>
 
               <p className="about-hero__intro">
-                Arquiteta e urbanista com sede em Salvador, Bahia, e atuação em todo o
-                território nacional. Fundadora do Dattoli Studio Arquitetura, escritório
-                dedicado a projetos de arquitetura e interiores e a avaliações técnicas de imóveis.
+                Karine Dattoli está à frente do Dattoli Studio, com base em Salvador e
+                atuação em diferentes regiões do Brasil. Sua arquitetura se constrói a
+                partir de uma abordagem precisa, onde forma, função e materialidade são
+                tratadas com igual rigor.
               </p>
               <p className="about-hero__text">
-                Com uma trajetória marcada pela atenção às necessidades do cliente e pelo
-                rigor no processo projetual, Karine desenvolve projetos residenciais e
-                comerciais de pequeno e médio porte que unem funcionalidade, identidade e
-                qualidade construtiva.
+                Com olhar atento às singularidades de cada projeto, desenvolve espaços que
+                revelam uma estética contida e atemporal, conduzida pelo equilíbrio entre
+                proporção, luz e uso. Cada solução parte de uma escuta cuidadosa, traduzindo
+                de forma sutil as particularidades de quem habita o espaço. O resultado são
+                ambientes que se afirmam sem excessos, com identidade clara e permanência.
               </p>
               <p className="about-hero__text">
-                Paralelamente à prática projetual, o escritório atua na área de avaliação
-                mercadológica de imóveis, prestando serviços a clientes avulsos, escritórios
-                jurídicos e instituições — com laudos precisos e respaldo técnico fundamentado
-                nas normas da ABNT.
+                O escritório também atua na avaliação de imóveis, oferecendo suporte técnico
+                a clientes e instituições em decisões patrimoniais.
               </p>
-              <p className="about-hero__text">
-                Em 2025, Karine foi convocada como avaliadora credenciada pelo Tribunal de
-                Justiça da Bahia (TJBA) e integrou o time de apresentadoras do ASBEACast,
-                podcast oficial da Associação Brasileira dos Escritórios de Arquitetura
-                (ASBEA), lançado durante a Convenção Nacional ASBEA 2025.
-              </p>
+
+              <div className="about-hero__stats">
+                <div>
+                  <p className="about-hero__stat-number">10+</p>
+                  <p className="about-hero__stat-label">Anos de atuação</p>
+                </div>
+                <div>
+                  <p className="about-hero__stat-number">150+</p>
+                  <p className="about-hero__stat-label">Projetos entregues</p>
+                </div>
+              </div>
 
               <div style={{ marginTop: 'var(--spacing-md)' }}>
                 <Link to="/contato" className="btn btn--primary">Fale conosco</Link>
@@ -49,9 +54,17 @@ export default function About() {
             </div>
 
             <div className="about-hero__image-wrap">
-              <div className="about-hero__image-placeholder">
-                <span>Foto de Karine</span>
-              </div>
+              <img
+                className="about-hero__image"
+                src="/Foto_KarineDattoli.jpg"
+                alt="Karine Dattoli"
+              />
+              <p className="about-hero__image-credit">
+                Foto:{' '}
+                <a href="https://instagram.com/paolayrenato_" target="_blank" rel="noopener noreferrer">
+                  @paolayrenato_
+                </a>
+              </p>
             </div>
 
           </div>
@@ -66,7 +79,6 @@ export default function About() {
           <div className="about-services__grid">
 
             <div>
-              <div className="about-service__number">01</div>
               <h3 className="about-service__title">Projetos de Arquitetura & Interiores</h3>
               <p className="about-service__text">
                 Projetos residenciais e comerciais em qualquer escala — do estudo de
@@ -77,7 +89,6 @@ export default function About() {
             </div>
 
             <div>
-              <div className="about-service__number">02</div>
               <h3 className="about-service__title">Avaliação de Imóveis</h3>
               <p className="about-service__text">
                 Laudos técnicos de avaliação mercadológica conforme normas ABNT, para
@@ -116,8 +127,8 @@ export default function About() {
               <p className="about-info__value">Projetos · Avaliação de Imóveis</p>
             </div>
             <div className="about-info__item">
-              <p className="about-info__label">Credenciamento</p>
-              <p className="about-info__value">TJBA — Avaliadora judicial</p>
+              <p className="about-info__label">Credenciamentos</p>
+              <p className="about-info__value">TJBA — Perita Judicial<br />Avaliações imobiliárias para instituições financeiras</p>
             </div>
           </div>
         </div>

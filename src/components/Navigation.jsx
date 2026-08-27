@@ -35,11 +35,16 @@ export default function Navigation() {
     <>
       <nav className={`nav${scrolled ? ' nav--scrolled' : ''}`}>
         <div className="nav__inner">
-          <Link to="/" className="nav__logo" aria-label="Dattoli Studio — Início">
+          <Link
+            to="/"
+            className="nav__logo"
+            aria-label="Dattoli Studio — Início"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          >
             <img
-            src="/LOGO_KD3.png"
+            src="/SIMBOLO_KD3.png"
             alt="Dattoli Studio"
-            onError={e => { e.currentTarget.src = '/LOGO_KD.jpg' }}
+            onError={e => { e.currentTarget.src = '/SIMBOLO_KD.jpg' }}
             style={{ mixBlendMode: 'multiply' }}
           />
           </Link>

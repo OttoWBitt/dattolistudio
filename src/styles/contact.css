@@ -1,10 +1,10 @@
-.contact-header {
-  padding: var(--spacing-lg) 0;
+.contact-header.section {
+  padding: var(--spacing-md) 0;
   border-bottom: 1px solid var(--color-border);
 }
 
 .contact-body {
-  padding: var(--spacing-xl) 0;
+  padding: var(--spacing-md) 0 var(--spacing-xl);
 }
 
 .contact-body__inner {
@@ -119,6 +119,10 @@
   align-items: flex-start;
   gap: 0.75rem;
   padding: var(--spacing-sm) 0;
+}
+
+.form-consent + .form-consent {
+  padding-top: 0;
 }
 
 .form-consent input[type="checkbox"] {
