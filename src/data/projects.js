@@ -21,7 +21,6 @@ const projects = [
       '/media/projetos/canal-goat/foto-03.jpg',
       '/media/projetos/canal-goat/foto-04.jpg',
       '/media/projetos/canal-goat/foto-05.jpg',
-      '/media/projetos/canal-goat/foto-06.jpg',
       '/media/projetos/canal-goat/foto-07.jpg',
       '/media/projetos/canal-goat/foto-08.jpg',
     ],
