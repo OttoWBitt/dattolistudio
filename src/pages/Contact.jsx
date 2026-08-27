@@ -114,7 +114,7 @@ export default function Contact() {
             </div>
 
             {/* FORM */}
-            <form className="contact-form" ref={formRef} onSubmit={handleSubmit} noValidate>
+            <form className="contact-form" ref={formRef} onSubmit={handleSubmit}>
 
               <div className="form-row">
                 <div className="form-group">
